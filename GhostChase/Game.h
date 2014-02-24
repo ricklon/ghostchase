@@ -11,15 +11,20 @@
 #include <Adafruit_ST7735.h> // Hardware-specific library
 #include <SD.h>
 
+//* Nov  2, 2012  <MLS> Changed defines to enum
 //Game stages
-#define GAME_TITLE 0
-#define GAME_INTRO 1
-#define GAME_INSTR 2
-#define GAME_START 3
-#define GAME_PLAY 4
-#define GAME_DEATH 5
-#define GAME_WIN 6
-#define GAME_RESTART 7
+enum 
+{
+  GAME_TITLE  = 0,
+  GAME_INTRO,
+  GAME_INSTR,
+  GAME_START,
+  GAME_PLAY,
+  GAME_DEATH,
+  GAME_WIN,
+  GAME_RESTART
+};
+
 
 //Screen information
 #define WIDTH 16
@@ -71,9 +76,11 @@ extern int tiltStatusFB;  //0 = left, 1 = middle ,2 = right
 extern int leftEnergy;
 extern int rightEnergy;
 
-extern char combatBuff[17];
-extern char spaces[17];
-extern char bars[17];
+#define kCombatBuffLen  17
+
+extern char combatBuff[kCombatBuffLen];
+extern char spaces[kCombatBuffLen];
+extern char bars[kCombatBuffLen];
 
 extern byte squiGhost1L[8];
 extern byte squiGhost1R[8];
