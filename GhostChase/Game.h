@@ -11,6 +11,7 @@
 #include <Adafruit_ST7735.h> // Hardware-specific library
 #include <SD.h>
 
+//Game stages
 #define GAME_TITLE 0
 #define GAME_INTRO 1
 #define GAME_INSTR 2
@@ -20,13 +21,14 @@
 #define GAME_WIN 6
 #define GAME_RESTART 7
 
-
+//Screen information
 #define WIDTH 16
 #define HEIGHT 2
 #define RED_BG 12
 #define GREEN_BG 14
 #define BLUE_BG 15
 
+//controls: tilt information
 #define TILT_PINA 16
 #define TILT_PINB 17
 #define TILT_PINC 13
@@ -37,6 +39,7 @@
 #define TILT_F 3
 #define TILT_B 4
 
+//game time
 extern unsigned long gTime;
 extern long gPrevTime;
 
